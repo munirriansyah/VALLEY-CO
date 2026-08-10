@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  /* === VALLEY CO. brand palette === */
+  --color-cream: #F2EBE0;
+  --color-olive: #3A4A34;
+  --color-olive-deep: #2A362A;
+  --color-brown: #6B5544;
+  --color-line: #A8A290;
+
+  /* === Typography === */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Jost", "Helvetica Neue", sans-serif;
+
+  /* === Layout tokens === */
+  --breakpoint-xs: 380px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-olive);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Visible keyboard focus, styled to match brand rather than browser default */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-olive);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Reusable "eyebrow" label style — small tracked uppercase caption */
+  .label-tracked {
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+
+  /* Thin hairline divider used throughout instead of shadows/cards */
+  .hairline {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .container-app {
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 768px) {
+    .container-app { max-width: 720px; }
+  }
+  @media (min-width: 1024px) {
+    .container-app { max-width: 960px; }
+  }
+
+  /* Subtle fade-in-up, used sparingly (Hero only) for a quiet page-load moment */
+  .fade-in-up {
+    animation: fadeInUp 0.9s ease-out both;
+  }
+  .fade-in-up-delay-1 { animation-delay: 0.15s; }
+  .fade-in-up-delay-2 { animation-delay: 0.3s; }
+  .fade-in-up-delay-3 { animation-delay: 0.45s; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
