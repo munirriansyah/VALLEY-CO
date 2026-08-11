@@ -9,12 +9,6 @@ export const marketplaces = [
     icon: "ShoppingBag",
   },
   {
-    id: "tokopedia",
-    label: "Tokopedia",
-    url: "#",
-    icon: "Store",
-  },
-  {
     id: "whatsapp",
     label: "Order via WhatsApp",
     url: "#",

@@ -1,14 +1,7 @@
-// === VALLEY CO. — Brand Identity Data ===
-// Ubah nilai di sini untuk memperbarui teks brand di seluruh website.
-
 const brand = {
   name: "VALLEY CO.",
   tagline: "From the Heart of the Valley",
-  established: "EST. 2024",
-
-  // Kalimat pendek untuk hero / mini intro (1-2 kalimat, bukan paragraf panjang)
-  shortStatement:
-    "Pakaian yang dibuat untuk mereka yang menemukan tenang di antara lembah dan pegunungan.",
+  established: "EST. 2026",
 
   // Cerita brand versi ringkas untuk section "Our Story"
   story: {
@@ -22,7 +15,6 @@ const brand = {
   // Kontak & lokasi (opsional, dipakai di footer)
   contact: {
     email: "hello@valleyco.id",
-    location: "Bandung, Indonesia",
   },
 
   // Menu navigasi (desktop & mobile)

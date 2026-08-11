@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import BrandStatement from "./components/BrandStatement";
 import ProductGrid from "./components/ProductGrid";
 import MarketplaceCTA from "./components/MarketplaceCTA";
 import Lookbook from "./components/Lookbook";
@@ -17,7 +16,6 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <BrandStatement />
         <ProductGrid />
         <MarketplaceCTA />
         <Lookbook />
