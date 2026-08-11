@@ -4,25 +4,31 @@ import { socials, marketplaces } from "../data/links";
 import Section from "./Section";
 import logo from "../assets/valley-co-logo.png";
 
-// Peta icon eksplisit (bukan import * ) agar bundler bisa tree-shake
-// icon lucide-react yang tidak dipakai.
+
 const Icons = { AtSign, Music2, MessageCircle, Mail, Link: LinkIcon };
 
 const whatsapp = marketplaces.find((m) => m.id === "whatsapp");
 
-// Link kontak & sosial footer, disusun dari data yang sudah ada.
 const footerLinks = [
-  ...socials.map((s) => ({ id: s.id, label: s.label, url: s.url, icon: s.icon })),
+  ...socials.map((s) => ({
+    id: s.id,
+    label: s.label,
+    url: s.url,
+    icon: s.icon,
+  })),
   ...(whatsapp
-    ? [{ id: whatsapp.id, label: "WhatsApp", url: whatsapp.url, icon: whatsapp.icon }]
+    ? [
+        {
+          id: whatsapp.id,
+          label: "WhatsApp",
+          url: whatsapp.url,
+          icon: whatsapp.icon,
+        },
+      ]
     : []),
-  { id: "email", label: brand.contact.email, url: `mailto:${brand.contact.email}`, icon: "Mail" },
 ];
 
-/**
- * Footer — logo kecil, tagline, link kontak/sosial, copyright.
- * Minimal, editorial, hairline divider di atas, tanpa card.
- */
+
 export default function Footer() {
   return (
     <Section id="footer" className="text-center">

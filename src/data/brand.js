@@ -3,7 +3,6 @@ const brand = {
   tagline: "From the Heart of the Valley",
   established: "EST. 2026",
 
-  // Cerita brand versi ringkas untuk section "Our Story"
   story: {
     heading: "Cerita Kami",
     paragraphs: [
@@ -12,12 +11,6 @@ const brand = {
     ],
   },
 
-  // Kontak & lokasi (opsional, dipakai di footer)
-  contact: {
-    email: "hello@valleyco.id",
-  },
-
-  // Menu navigasi (desktop & mobile)
   navItems: [
     { label: "Home", href: "#hero" },
     { label: "Collection", href: "#collection" },

@@ -23,10 +23,4 @@ export const socials = [
     url: "https://www.instagram.com/valleyco._?igsh=cTZuN2h0enNrcW95",
     icon: "AtSign",
   },
-  {
-    id: "tiktok",
-    label: "TikTok",
-    url: "#",
-    icon: "Music2",
-  },
 ];

@@ -3,8 +3,8 @@ import baju2 from "../assets/products/baju2.jpg";
 
 const products = [
   {
-    id: "valley-heritage-tee",
-    name: "Heritage Valley Tee",
+    id: "valley-tee",
+    name: "The Open Land Tee",
     category: "T-Shirt",
     price: "Rp 130.000",
     image: baju1,
@@ -14,10 +14,10 @@ const products = [
     marketplaceUrl: "#",
   },
   {
-    id: "ridge-overshirt",
-    name: "Ridge Overshirt",
-    category: "Outerwear",
-    price: "Rp 349.000",
+    id: "overshirt",
+    name: "Somewhere Along the Way Tee",
+    category: "T-Shirt",
+    price: "Rp 130.000",
     image: baju2,
     description:
       "Overshirt katun tebal dengan warna earthy brown, cocok untuk udara pegunungan.",
