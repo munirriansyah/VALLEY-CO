@@ -1,13 +1,9 @@
 import { Shirt } from "lucide-react";
 
-/**
- * ProductCard — foto sebagai fokus utama, tanpa shadow/card berat.
- * Seluruh kartu adalah link menuju marketplaceUrl.
- */
 export default function ProductCard({ product }) {
   return (
     <a
-      href={product.marketplaceUrl}
+      href={`#product/${product.id}`}
       className="group flex flex-col fade-in-up"
     >
       <div className="aspect-[4/5] w-full rounded-md overflow-hidden bg-line/15 flex items-center justify-center">
@@ -15,6 +11,7 @@ export default function ProductCard({ product }) {
           <img
             src={product.image}
             alt={product.name}
+            loading="lazy"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             onError={(e) => {
               e.currentTarget.style.display = "none";

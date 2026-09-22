@@ -2,10 +2,6 @@ import products from "../data/products";
 import Section from "./Section";
 import ProductCard from "./ProductCard";
 
-/**
- * ProductGrid — "Featured Collection". 2 kolom di mobile,
- * 3-4 kolom di desktop. Menampilkan hingga 4 produk.
- */
 export default function ProductGrid() {
   const featured = products.filter((p) => p.featured).slice(0, 4);
 

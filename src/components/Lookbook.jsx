@@ -1,7 +1,10 @@
+import { useState } from "react";
+import { Image as ImageIcon } from "lucide-react";
 import Section from "./Section";
-import lookbook1 from "../assets/images/lookbook1.jpg";
-import lookbook2 from "../assets/images/lookbook2.jpg";
-import lookbook3 from "../assets/images/lookbook3.jpg";
+
+import lookbook1 from "../assets/lookbook/lookbook-1.jpg";
+import lookbook2 from "../assets/lookbook/lookbook-2.jpg";
+import lookbook3 from "../assets/lookbook/lookbook-3.jpg";
 
 const plates = [
   {
@@ -24,6 +27,32 @@ const plates = [
   },
 ];
 
+function LookbookPlate({ image, alt, span }) {
+  const [broken, setBroken] = useState(false);
+
+  return (
+    <div
+      className={`fade-in-up ${span} rounded-md overflow-hidden bg-olive-deep/[0.06] flex items-center justify-center`}
+    >
+      {!broken ? (
+        <img
+          src={image}
+          alt={alt}
+          loading="lazy"
+          className="w-full h-full object-cover"
+          onError={() => setBroken(true)}
+        />
+      ) : (
+        <ImageIcon
+          size={26}
+          strokeWidth={0.9}
+          className="text-olive/25"
+        />
+      )}
+    </div>
+  );
+}
+
 export default function Lookbook() {
   return (
     <Section id="lookbook">
@@ -37,16 +66,12 @@ export default function Lookbook() {
 
       <div className="grid grid-cols-5 gap-4 sm:gap-6">
         {plates.map(({ id, image, alt, span }) => (
-          <div
+          <LookbookPlate
             key={id}
-            className={`fade-in-up ${span} rounded-md overflow-hidden`}
-          >
-            <img
-              src={image}
-              alt={alt}
-              className="w-full h-full object-cover"
-            />
-          </div>
+            image={image}
+            alt={alt}
+            span={span}
+          />
         ))}
       </div>
     </Section>

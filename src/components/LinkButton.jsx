@@ -1,9 +1,5 @@
 import * as Icons from "lucide-react";
 
-/**
- * LinkButton — tombol tautan generik (marketplace/social),
- * dipakai berulang dengan icon dari lucide-react berdasarkan nama string.
- */
 export default function LinkButton({ label, url, icon, variant = "outline" }) {
   const Icon = Icons[icon] || Icons.Link;
 

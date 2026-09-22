@@ -1,8 +1,3 @@
-/**
- * Section — wrapper konsisten untuk setiap bagian halaman.
- * Menerapkan padding vertical generous, container mobile-first,
- * dan hairline divider opsional di bagian atas.
- */
 export default function Section({
   id,
   children,

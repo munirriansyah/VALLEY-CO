@@ -1,11 +1,6 @@
 import brand from "../data/brand";
 import logo from "../assets/valley-co-logo.png";
 
-/**
- * Hero — logo sebagai fokus utama di atas ilustrasi valley/mountain
- * line-art yang senada dengan gaya logo (bukan foto stok generik).
- * Whitespace luas, tanpa card/gradient berat, animasi fade-in halus.
- */
 export default function Hero() {
   return (
     <section
